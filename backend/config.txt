@@ -1,4 +1,0 @@
-npx prisma format
-
-npx prisma migrate dev --name ainit
-npx prisma migrate dev --name aluguel-update
