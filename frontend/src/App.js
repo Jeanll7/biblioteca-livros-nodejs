@@ -15,7 +15,6 @@ function App() {
   const handleShow = () => setShow(true);
 
   async function cadastrarAluguel() {
-    console.log({ clienteId: clienteId, livroId: livroId });
     await api
       .post("/aluguel", {
         clienteId: parseInt(clienteId),
@@ -24,7 +23,6 @@ function App() {
       .then((response) => {
         getAluguels();
       });
-    setShow(false);
   }
 
   const [aluguels, setAlguels] = useState([]);
@@ -36,8 +34,7 @@ function App() {
         setAlguels(response.data);
       })
       .catch((e) => {
-        // alert(e);
-        console.log(e);
+        alert(e);
       });
   }
 

@@ -30,8 +30,8 @@ async function put(req, res) {
   req.body.valorArrecadado = parseFloat(dias) * parseFloat(valorDiaria);
 
   delete req.body.valorDiaria;
-  delete req.body.Livro;
-  delete req.body.Cliente;
+  delete req.body.livro;
+  delete req.body.cliente;
 
   const aluguel = await prisma.aluguel.update({
     data: req.body,
