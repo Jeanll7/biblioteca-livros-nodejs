@@ -21,14 +21,17 @@ async function get(req, res) {
 }
 
 async function put(req, res) {
+  console.log();
   let { data, dataDevolucao } = req.body;
+  let { valorDiaria } = req.body.Livro;
 
   let dias = moment(dataDevolucao).diff(data, "days");
 
-  req.body.valorArrecadado =
-    parseFloat(dias) * parseFloat(req.body.valorDiaria);
+  req.body.valorArrecadado = parseFloat(dias) * parseFloat(valorDiaria);
 
   delete req.body.valorDiaria;
+  delete req.body.Livro;
+  delete req.body.Cliente;
 
   const aluguel = await prisma.aluguel.update({
     data: req.body,
