@@ -13,11 +13,9 @@ function NavBar() {
           <Nav className="me-auto">
             <Nav.Link href="#home">Menu</Nav.Link>
             <NavDropdown title="Cadastrar" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Livro</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2">Cliente</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">Aluguel</NavDropdown.Item>
+              <NavDropdown.Item href="livro">Livro</NavDropdown.Item> <hr />
+              <NavDropdown.Item href="cliente">Cliente</NavDropdown.Item> <hr />
+              <NavDropdown.Item href="aluguel">Aluguel</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

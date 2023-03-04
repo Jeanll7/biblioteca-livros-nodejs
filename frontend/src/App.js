@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Button, Form, Modal, Table } from "react-bootstrap";
 import api from "./service/api";
 import moment from "moment";
-import NavBar from "./NavBar";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -62,8 +61,7 @@ function App() {
 
   return (
     <div className="container">
-      <NavBar />
-      <Button variant="primary" onClick={handleShow}>
+      <Button className="mt-2 mb-2" variant="primary" onClick={handleShow}>
         Cadastrar Aluguel
       </Button>
       <Table striped bordered hover>
