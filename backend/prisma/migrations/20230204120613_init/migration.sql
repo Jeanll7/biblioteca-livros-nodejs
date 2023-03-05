@@ -16,9 +16,9 @@ CREATE TABLE "Livro" (
 -- CreateTable
 CREATE TABLE "Aluguel" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "data" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "dataDevolucao" DATETIME,
-    "valorArrecadado" DECIMAL,
+    "data" DATETIME NOT NULL,
+    "dataDevolucao" DATETIME NOT NULL,
+    "valorArrecadado" DECIMAL NOT NULL,
     "clienteId" INTEGER NOT NULL,
     "livroId" INTEGER NOT NULL,
     CONSTRAINT "Aluguel_clienteId_fkey" FOREIGN KEY ("clienteId") REFERENCES "Cliente" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,

@@ -19,5 +19,6 @@ routes.post("/livro/:id", livroController.putIsAlterado);
 routes.get("/aluguel", aluguelController.get);
 routes.post("/aluguel", aluguelController.create);
 routes.put("/aluguel", aluguelController.put);
+routes.delete("/aluguel/:id", aluguelController.delet);
 
 module.exports = { routes };

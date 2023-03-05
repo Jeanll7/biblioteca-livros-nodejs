@@ -9,6 +9,16 @@ async function create(req, res) {
   res.json(aluguel);
 }
 
+// delete
+
+async function delet(req, res) {
+  let { id } = req.params;
+  const aluguel = await prisma.aluguel.delete({
+    where: id,
+  });
+  res.json(aluguel);
+}
+
 async function get(req, res) {
   res.json(
     await prisma.aluguel.findMany({
@@ -43,4 +53,4 @@ async function put(req, res) {
   return res.json(aluguel);
 }
 
-module.exports = { create, get, put };
+module.exports = { create, get, put, delet };
