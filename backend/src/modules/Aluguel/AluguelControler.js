@@ -9,8 +9,6 @@ async function create(req, res) {
   res.json(aluguel);
 }
 
-// delete
-
 async function delet(req, res) {
   let { id } = req.params;
   const aluguel = await prisma.aluguel.delete({

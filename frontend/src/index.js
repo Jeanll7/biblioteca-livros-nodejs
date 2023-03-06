@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./NavBar";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CadastroLivros from "./CadastroLivros";
+import CadastroCliente from "./CadastroCliente";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,20 +16,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route key="aluguel" path="/aluguel" element={<App />} />
-        <Route
-          key="livro"
-          path="/livro"
-          element={() => {
-            return <h1>Livro</h1>;
-          }}
-        />
-        <Route
-          key="cliente"
-          path="/cliente"
-          element={() => {
-            return <h1>Cliente</h1>;
-          }}
-        />
+        <Route key="livro" path="/livro" element={<CadastroLivros />} />
+        <Route key="cliente" path="/cliente" element={<CadastroCliente />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

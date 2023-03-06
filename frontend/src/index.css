@@ -4,3 +4,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.botoes {
+    display: flex;
+    text-align: justify;
+    flex-direction: row;
+    margin: 5px;
+    gap: 5px;
+}
